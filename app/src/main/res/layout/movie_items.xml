@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="MovieListItem"
+            type="com.learn.degger.movieappmddnl.model.Movie" />
+    </data>
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:background="@drawable/background"
+        android:id="@+id/movieItemRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp">
+
+        <ImageView
+            android:id="@+id/movieItemImage"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bloodshot"
+            app:imageUrl="@{MovieListItem.poster_path}" />
+
+        <RelativeLayout
+            android:id="@+id/detailsLayout"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.95"
+            android:background="@color/teal_700">
+
+            <TextView
+                android:id="@+id/movieItemName"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="3"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@{MovieListItem.original_title}"
+                android:textColor="#fff"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/movieItemVotes"
+                android:src="@drawable/ic_like" />
+
+            <TextView
+                android:id="@+id/movieItemVotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:text="@{String.valueOf(MovieListItem.vote_count)}"
+                android:textColor="#fff"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

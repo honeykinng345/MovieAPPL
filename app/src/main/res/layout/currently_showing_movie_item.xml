@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="MovieListItem"
+            type="com.learn.degger.movieappmddnl.model.Movie" />
+    </data>
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/currentlyShowingLayout"
+        >
+
+        <ImageView
+            android:id="@+id/currentlyShowingMovieImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/background"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{MovieListItem.poster_path}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentlyShowingMovieName"
+            android:text="@{MovieListItem.original_title}"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:maxLines="2"
+            android:textColor="#fff"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</layout>

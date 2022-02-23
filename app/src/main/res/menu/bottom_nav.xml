@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black_24dp"/>
+    <item android:id="@+id/favFragment"
+        android:title="WishList"
+        android:icon="@drawable/ic_baseline_favorite_border_24"/>
+
+    <item
+        android:title="Starss"
+        android:icon="@drawable/ic_home_black_24dp"/>
+    <item android:id="@+id/settingsFragment"
+        android:title="Profile"
+        android:icon="@drawable/ic_person_black_24dp"/>
+
+</menu>
